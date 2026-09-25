@@ -118,6 +118,21 @@ class ContactForm {
         if (this.form) {
             this.form.addEventListener('submit', (e) => this.handleSubmit(e));
             this.setupFormValidation();
+            this.setupSuccessMessage();
+        }
+    }
+
+    setupSuccessMessage() {
+        const successMessage = document.getElementById('contact-success-message');
+        const sendAnotherButton = document.getElementById('contact-send-another');
+        const nameInput = document.getElementById('name');
+
+        if (successMessage && sendAnotherButton) {
+            sendAnotherButton.addEventListener('click', () => {
+                successMessage.classList.add('hidden');
+                this.form.classList.remove('hidden');
+                nameInput?.focus();
+            });
         }
     }
 
@@ -249,6 +264,12 @@ class ContactForm {
             if (data.success) {
                 // Reset form
                 this.form.reset();
+
+                const successMessage = document.getElementById('contact-success-message');
+                this.form.classList.add('hidden');
+                if (successMessage) {
+                    successMessage.classList.remove('hidden');
+                }
                 
                 // Show success message
                 this.showNotification('✓ Message sent successfully! I\'ll get back to you soon.', 'success');

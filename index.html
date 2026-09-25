@@ -87,6 +87,21 @@
             transform: translateY(-8px);
         }
 
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 24px 42px -12px rgba(13, 148, 136, 0.42);
+            border-color: rgba(45, 212, 191, 0.95);
+        }
+
+        .project-card:active {
+            transform: translateY(-5px) scale(0.99);
+            box-shadow: 0 16px 30px -12px rgba(13, 148, 136, 0.35);
+        }
+
         .theme-transition {
             transition: background-color 0.3s ease, color 0.3s ease;
         }
@@ -1914,10 +1929,10 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                             </svg>
                         </button>
-                        <div id="projects-scroller" class="flex gap-8 overflow-x-auto scrollbar-hide pb-4 mb-12 snap-x snap-mandatory">
+                        <div id="projects-scroller" class="flex gap-8 overflow-x-auto scrollbar-hide px-3 pt-4 pb-8 mb-12 snap-x snap-mandatory">
                         <!-- Project 1 -->
                         <div
-                            class="flex-none w-[85vw] sm:w-[420px] lg:w-[380px] snap-start bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden card-hover border border-white/20 dark:border-gray-700/50">
+                            class="project-card flex-none w-[85vw] sm:w-[420px] lg:w-[380px] snap-start bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden card-hover border border-white/20 dark:border-gray-700/50">
                             <div
                                 class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 relative overflow-hidden flex items-center justify-center">
                                 <div class="absolute inset-0 bg-black/10"></div>
@@ -1950,7 +1965,7 @@
 
                         <!-- Project 2 -->
                         <div
-                            class="flex-none w-[85vw] sm:w-[420px] lg:w-[380px] snap-start bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden card-hover border border-white/20 dark:border-gray-700/50">
+                            class="project-card flex-none w-[85vw] sm:w-[420px] lg:w-[380px] snap-start bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden card-hover border border-white/20 dark:border-gray-700/50">
                             <div
                                 class="h-48 bg-gradient-to-br from-green-400 to-teal-500 relative overflow-hidden flex items-center justify-center">
                                 <div class="absolute inset-0 bg-black/10"></div>
@@ -1982,7 +1997,7 @@
 
                         <!-- Project 3 -->
                         <div
-                            class="flex-none w-[85vw] sm:w-[420px] lg:w-[380px] snap-start bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden card-hover border border-white/20 dark:border-gray-700/50">
+                            class="project-card flex-none w-[85vw] sm:w-[420px] lg:w-[380px] snap-start bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden card-hover border border-white/20 dark:border-gray-700/50">
                             <div
                                 class="h-48 bg-gradient-to-br from-teal-400 to-blue-500 relative overflow-hidden flex items-center justify-center">
                                 <div class="absolute inset-0 bg-black/10"></div>
@@ -2015,7 +2030,7 @@
 
                         <!-- Project 4 -->
                         <div
-                            class="flex-none w-[85vw] sm:w-[420px] lg:w-[380px] snap-start bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden card-hover border border-white/20 dark:border-gray-700/50">
+                            class="project-card flex-none w-[85vw] sm:w-[420px] lg:w-[380px] snap-start bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden card-hover border border-white/20 dark:border-gray-700/50">
                             <div
                                 class="h-48 bg-gradient-to-br from-orange-400 to-red-500 relative overflow-hidden flex items-center justify-center">
                                 <div class="absolute inset-0 bg-black/10"></div>
@@ -2036,6 +2051,11 @@
                                     <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-xs rounded">IoT</span>
                                     <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-xs rounded">GPS</span>
                                     <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-xs rounded">Power BI</span>
+                                </div>
+                                <div class="flex space-x-4">
+                                    <a href="https://github.com/JayanithaSivakumar" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-teal-500 hover:text-teal-600 font-medium">Source Code</a>
                                 </div>
                             </div>
                         </div>
@@ -2272,6 +2292,20 @@
                                         </span>
                                     </button>
                                 </form>
+
+                                <div id="contact-success-message" class="hidden text-center py-12" role="status" aria-live="polite">
+                                    <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-300 flex items-center justify-center">
+                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Thank you for your message!</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-6">Thank you sincerely for taking the time to explore my portfolio and share your thoughts. Your message means a lot to me.</p>
+                                    <button id="contact-send-another" type="button"
+                                        class="inline-flex items-center justify-center px-5 py-3 border-2 border-teal-500 text-teal-600 dark:text-teal-300 rounded-xl hover:bg-teal-500 hover:text-white transition-all duration-300 font-semibold focus:outline-none focus:ring-4 focus:ring-teal-500/20">
+                                        Leave Another Message
+                                    </button>
+                                </div>
 
                                 <div class="mt-6 text-center">
                                     <p class="text-sm text-gray-500 dark:text-gray-400">
