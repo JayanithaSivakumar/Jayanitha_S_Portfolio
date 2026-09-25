@@ -64,7 +64,7 @@ Jayanitha_S_Portfolio/
 ├── 1_cutout_full.png
 ├── 2.jpg
 ├── 2_cropped.png
-└── Jayanitha Resume.PDF
+└── Jayanitha Resume.pdf
 ```
 
 ## 🌐 Live Portfolio
