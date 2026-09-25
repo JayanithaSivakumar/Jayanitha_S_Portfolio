@@ -1,4 +1,4 @@
-# ✨ Jayanitha S Portfolio 
+# Jayanitha S 
 
 > A responsive portfolio showcasing my journey across web development, artificial intelligence, data science, analytics, and IoT. 🚀
 
